@@ -1,0 +1,69 @@
+apply plugin: 'com.android.application'
+
+android {
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/maven/joda-time/joda-time/pom.properties'
+        exclude 'META-INF/maven/joda-time/joda-time/pom.xml'
+        pickFirst 'org/joda/time/format/messages.properties'
+        pickFirst 'org/joda/time/format/messages_cs.properties'
+        pickFirst 'org/joda/time/format/messages_da.properties'
+        pickFirst 'org/joda/time/format/messages_de.properties'
+        pickFirst 'org/joda/time/format/messages_en.properties'
+        pickFirst 'org/joda/time/format/messages_es.properties'
+        pickFirst 'org/joda/time/format/messages_fr.properties'
+        pickFirst 'org/joda/time/format/messages_it.properties'
+        pickFirst 'org/joda/time/format/messages_ja.properties'
+        pickFirst 'org/joda/time/format/messages_nl.properties'
+        pickFirst 'org/joda/time/format/messages_pl.properties'
+        pickFirst 'org/joda/time/format/messages_pt.properties'
+        pickFirst 'org/joda/time/format/messages_ru.properties'
+        pickFirst 'org/joda/time/format/messages_tr.properties'
+    }
+
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    sourceSets {
+        main {
+        }
+    }
+    defaultConfig {
+        applicationId "domel.ecampus"
+        minSdkVersion 14
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:support-v4:23.4.0'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support:design:23.4.0'
+    compile 'com.viewpagerindicator:library:2.4.1@aar'
+    compile 'org.apache.commons:commons-lang3:3.4'
+    compile 'com.code-troopers.betterpickers:library:2.5.5'
+    //compile 'net.danlew:android.joda:2.9.3'
+    compile (
+            [group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.4.1'],
+            [group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.4.1'],
+            [group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.4.1'],
+            [group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-joda', version: '2.7.4']
+    )
+    compile 'com.google.android.gms:play-services-appindexing:8.4.0'
+}
+
