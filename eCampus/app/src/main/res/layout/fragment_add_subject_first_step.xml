@@ -1,0 +1,75 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="domel.ecampus.Fragment.AddSubjectFirstStepFragment">
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/double_margin"
+        android:layout_marginBottom="@dimen/double_margin"
+        android:id="@+id/view1" >
+
+        <android.support.v7.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:maxLines="1"
+            android:inputType="text|textNoSuggestions"
+            android:singleLine="true"
+            android:hint="@string/subject_name"
+            android:id="@+id/subject_name" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view1"
+        android:layout_above="@+id/degree_wrapper"
+        android:layout_marginBottom="@dimen/simple_padding"
+        android:id="@+id/view2" >
+
+        <android.support.v7.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textFilter|textMultiLine|textNoSuggestions"
+            android:lines="8"
+            android:layout_below="@id/view1"
+            android:layout_above="@+id/degree_wrapper"
+            android:maxLines="9"
+            android:minLines="2"
+            android:gravity="top|left"
+            android:hint="@string/subject_description"
+            android:id="@+id/subject_description"
+            />
+
+    </android.support.design.widget.TextInputLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/xs"
+        android:layout_alignParentBottom="true"
+        android:id="@id/degree_wrapper">
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/add_degree"
+            android:id="@+id/spinner_title"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"/>
+
+        <android.support.v7.widget.AppCompatSpinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/student_degree"
+            android:prompt="@string/add_student_form_carrer_placeholder"
+            />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

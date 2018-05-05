@@ -1,0 +1,25 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/simple_padding"
+    android:orientation="vertical"
+    tools:context="domel.ecampus.Fragment.AddSubjectSecondStepFragment">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/registered_students_title"
+        android:layout_marginBottom="@dimen/simple_padding"
+        android:id="@+id/registered_students"/>
+
+    <android.support.v7.widget.ListViewCompat
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/list_students"/>
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="gone"
+    android:background="@color/black_75">
+
+    <domel.ecampus.Component.TouchImageView
+        android:id="@+id/full_screen_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:scaleType="fitCenter"
+        android:layout_marginTop="@dimen/triple_margin"
+        android:layout_marginBottom="@dimen/triple_margin"
+        android:background="@color/black_15"
+        android:src="@mipmap/la_salle_logo"/>
+
+    <android.support.v7.widget.AppCompatImageButton
+        android:id="@+id/btnClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="@dimen/simple_padding"
+        android:layout_marginEnd="@dimen/simple_padding"
+        android:layout_marginTop="@dimen/simple_padding"
+        android:src="@drawable/simple_close_36dp"
+        android:background="@color/transparent"
+        />
+
+</RelativeLayout>

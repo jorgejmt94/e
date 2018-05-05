@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="degrees">
+        <item>Informàtica</item>
+        <item>Telemàtica</item>
+        <item>Multimedia</item>
+        <item>Animación</item>
+        <item>Magisterio</item>
+        <item>Electrónica</item>
+    </string-array>
+
+    <string-array name="assigned_class">
+        <item>Aula 0</item>
+        <item>Aula 1</item>
+        <item>Aula 2</item>
+        <item>Aula 3</item>
+        <item>Aula 4</item>
+        <item>Aula 5</item>
+    </string-array>
+
+
+
+
+
+</resources>

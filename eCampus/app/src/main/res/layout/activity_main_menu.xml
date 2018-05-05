@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".Activity.MainMenuActivity"
+    android:background="@color/colorPrimaryLighten5"
+    android:weightSum="2">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:fitsSystemWindows="true">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            android:paddingRight="@dimen/simple_padding"
+            android:paddingEnd="@dimen/simple_padding"
+            android:layout_gravity="left"
+            android:gravity="left"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/logo"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/logo"
+                />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:paddingLeft="5dp"
+                android:textSize="@dimen/title_toolbar"
+                />
+
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:layout_margin="10dp">
+        <LinearLayout
+            android:id="@+id/linear_subjects"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_gravity="bottom"
+            android:gravity="center">
+            <android.support.v7.widget.AppCompatImageView
+                android:src="@drawable/subject"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"></android.support.v7.widget.AppCompatImageView>
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:text="@string/subject_management"></android.support.v7.widget.AppCompatTextView>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linear_students"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_gravity="bottom"
+            android:gravity="center">
+            <android.support.v7.widget.AppCompatImageView
+                android:src="@drawable/student"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"></android.support.v7.widget.AppCompatImageView>
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:text="@string/student_management"></android.support.v7.widget.AppCompatTextView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:layout_gravity="center|center_vertical|center_horizontal"
+        android:layout_margin="10dp">
+        <LinearLayout
+            android:id="@+id/linear_exam"
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center">
+            <android.support.v7.widget.AppCompatImageView
+                android:src="@drawable/exam"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"></android.support.v7.widget.AppCompatImageView>
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/exams"></android.support.v7.widget.AppCompatTextView>
+    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linear_logout"
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center">
+            <android.support.v7.widget.AppCompatImageView
+                android:src="@drawable/exit"
+                android:layout_width="124dp"
+                android:layout_height="100dp"
+                android:paddingLeft="24dp"
+                android:layout_margin="10dp"></android.support.v7.widget.AppCompatImageView>
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/logout"></android.support.v7.widget.AppCompatTextView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v7.widget.LinearLayoutCompat>

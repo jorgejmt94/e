@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+     >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/wrapper">
+
+        <LinearLayout
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context="domel.ecampus.Activity.StudentActivity">
+
+            <android.support.design.widget.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/AppTheme.AppBarOverlay">
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="?attr/colorPrimary"
+                    app:popupTheme="@style/AppTheme.PopupOverlay"
+                    android:paddingRight="24dp">
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/back_toolbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/back_toolbar"
+                    android:layout_gravity="left" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/logo"
+                    android:layout_gravity="left" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:weightSum="3">
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/app_name"
+                        android:textSize="@dimen/title_toolbar"
+                        android:layout_gravity="left"
+                        android:layout_weight="2"/>
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/view_student_title"
+                        android:textStyle="normal"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/subtitle_toolbar"
+                        android:layout_gravity="left" />
+                </LinearLayout>
+
+                </android.support.v7.widget.Toolbar>
+            </android.support.design.widget.AppBarLayout>
+            <LinearLayout
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                tools:context="domel.ecampus.Activity.StudentActivity">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/student_info_layout">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/simple_padding"
+                        android:layout_weight="1"
+                        android:id="@+id/profile_picture" />
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_margin="@dimen/simple_padding"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:layout_marginBottom="@dimen/activity_vertical_margin"
+                            android:gravity="left|start"
+                            android:id="@+id/student_name" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left|start"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:layout_marginBottom="@dimen/xs"
+                            android:paddingLeft="3dp"
+                            android:paddingRight="3dp"
+                            android:id="@+id/student_career" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:layout_marginBottom="@dimen/xs"
+                            android:gravity="left|start"
+                            android:paddingLeft="@dimen/xs"
+                            android:paddingRight="@dimen/xs"
+                            android:id="@+id/student_birthdate" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:layout_marginBottom="@dimen/xs"
+                            android:gravity="left|start"
+                            android:paddingLeft="@dimen/xs"
+                            android:paddingRight="@dimen/xs"
+                            android:id="@+id/student_gender" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:id="@+id/subject_wrapper"
+                    android:layout_height="match_parent">
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold"
+                        android:layout_marginTop="@dimen/double_margin"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="@string/subejct_title"
+                        android:id="@+id/textView7" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="@dimen/activity_vertical_margin"
+                        android:background="@color/colorPrimaryLighten"/>
+
+
+                    <!-- here go all the dynamically added subject strings -->
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <include layout="@layout/fullscreen_picture"
+    android:id="@+id/full_screen_wrapper"/>
+
+</RelativeLayout>
+

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:padding="@dimen/simple_padding"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/numeration"
+        android:layout_marginEnd="@dimen/simple_padding"
+        android:layout_marginRight="@dimen/simple_padding"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_centerVertical="true"/>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/numeration"
+        android:layout_toEndOf="@id/numeration"
+        android:layout_toLeftOf="@+id/buttonPanel"
+        android:layout_toStartOf="@+id/buttonPanel"
+        android:layout_centerVertical="true"
+        android:maxLines="3"
+        android:ellipsize="end"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/theme_name" />
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:id="@id/buttonPanel"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.AppCompatImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:layout_marginEnd="@dimen/simple_padding"
+            android:layout_marginRight="@dimen/simple_padding"
+            android:id="@+id/button_up"
+            android:src="@drawable/ic_expand_less_primary_24dp"/>
+
+        <android.support.v7.widget.AppCompatImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:layout_marginEnd="@dimen/simple_padding"
+            android:layout_marginRight="@dimen/simple_padding"
+            android:id="@+id/button_down"
+            android:src="@drawable/ic_expand_more_primary_24dp"/>
+
+        <android.support.v7.widget.AppCompatImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:id="@+id/button_delete"
+            android:src="@drawable/ic_delete_red_24dp"/>
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+</RelativeLayout>
